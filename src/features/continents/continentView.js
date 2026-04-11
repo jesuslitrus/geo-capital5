@@ -61,7 +61,7 @@ container.appendChild(globalStats);
     card.className = 'continent-card'
 
     const img = document.createElement('img')
-    img.src = `/continents/${image}`
+    img.src = `continents/${image}`// retirada antibarra
     img.alt = name
 
     const label = document.createElement('span')
