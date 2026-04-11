@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: './',   // 👈 AÑADE ESTA LÍNEA
+ base: '/geo-capital5/', // Cambia esto para que coincida con tu repo
 
   server: {
     host: true,

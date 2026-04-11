@@ -1,29 +1,42 @@
-const CACHE_NAME = 'geo-capital-v2';
+const CACHE_NAME = 'geo-capital-v3'; // Subimos versión para forzar actualización
 
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/logos/logo-192.png',
-  '/logos/logo-512.png'
+  '/geo-capital5/',             // La raíz de tu app en GitHub
+  '/geo-capital5/index.html',
+  '/geo-capital5/manifest.json', // ¡Añadido!
+  '/geo-capital5/logos/logo-192.png',
+  '/geo-capital5/logos/logo-512.png'
 ];
 
 // instalar
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+      .then(cache => {
+        console.log('Cacheando archivos...');
+        return cache.addAll(urlsToCache);
+      })
   );
 });
 
 // activar
 self.addEventListener('activate', event => {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cache => {
+          if (cache !== CACHE_NAME) {
+            return caches.delete(cache);
+          }
+        })
+      );
+    })
+  );
 });
 
-// fetch (cache-first)
+// fetch (Network-first para evitar que se quede "congelado" con errores 404)
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request)
-      .then(response => response || fetch(event.request))
+    fetch(event.request).catch(() => caches.match(event.request))
   );
 });
