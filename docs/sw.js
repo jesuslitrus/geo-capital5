@@ -1,11 +1,11 @@
 const CACHE_NAME = 'geo-capital-v3'; // Subimos versión para forzar actualización
 
 const urlsToCache = [
-  './geo-capital5/',             // La raíz de tu app en GitHub
-  './geo-capital5/index.html',
-  './geo-capital5/manifest.json', // ¡Añadido!
-  './geo-capital5/logos/logo-192.png',
-  './geo-capital5/logos/logo-512.png'
+  '/geo-capital5/',             // La raíz de tu app en GitHub
+  '/geo-capital5/index.html',
+  '/geo-capital5/manifest.json', // ¡Añadido!
+  '/geo-capital5/logos/logo-192.png',
+  '/geo-capital5/logos/logo-512.png'
 ];
 
 // instalar
