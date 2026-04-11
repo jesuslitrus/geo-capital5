@@ -119,7 +119,7 @@ const bigLogoContainer = document.createElement('div');
 bigLogoContainer.className = 'big-logo-container';
 
 const bigLogo = document.createElement('img');
-bigLogo.src = 'logo_juvenil.png';
+bigLogo.src = 'logos/logo-512.png';
 bigLogo.className = 'big-logo';
 
 bigLogoContainer.appendChild(bigLogo);
