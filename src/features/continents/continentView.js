@@ -8,7 +8,7 @@ export function renderContinents(container, onSelect) {
 header.className = 'app-header'
 
 const logo = document.createElement('img')
-logo.src = '/logo-192.png' // 👈 pon tu logo aquí
+logo.src = '/logo.png' // 👈 pon tu logo aquí
 logo.className = 'app-logo'
 
 const title = document.createElement('h1')
