@@ -5,6 +5,6 @@ export async function loadCountries() {
 
 
 export async function getAllCountries() {
-  const res = await fetch("./data/countries.json");
+  const res = await fetch("/data/countries.json");
   return await res.json();
 }
