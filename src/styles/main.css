@@ -1,0 +1,382 @@
+
+/* =========================
+   CONTINENTS
+========================= */
+
+.continent-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.continent-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px;
+  border-radius: 16px;
+  background: white;
+  text-align: center;
+
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.continent-card img {
+  width: 120px;
+  height: auto;
+}
+
+.continent-card span {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.continent-card:hover {
+  transform: scale(1.05);
+}
+
+.continent-card:active {
+  transform: scale(0.95);
+}
+
+
+/* =========================
+   DAILY VIEW
+========================= */
+
+.country-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.country-card:hover {
+  background: #f9f9f9;
+}
+
+.flag {
+  width: 50px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.country-card .info {
+  flex: 1;
+}
+
+.country-card .country {
+  font-weight: bold;
+}
+
+.country-card .capital {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.audio-btn {
+  font-size: 18px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.audio-btn:hover {
+  transform: scale(1.2);
+}
+
+
+/* =========================
+   ACTION SCREEN
+========================= */
+
+.action-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  margin-top: 30px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.action-btn {
+  font-size: 20px;
+  padding: 20px 28px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  min-width: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/*.action-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(227, 12, 12, 0.15);
+}*/
+
+.action-btn:active {
+  transform: scale(0.97);
+}
+
+.learn-btn {
+  background: #00C850;
+  color: white;
+}
+
+.quiz-btn {
+  background-color:red;
+  color: white;
+}
+
+
+/* =========================
+   HEADER (back + title)
+========================= */
+
+.header-bar {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.header-bar h2 {
+  margin: 0;
+}
+
+
+/* =========================
+   NAV BUTTON
+========================= */
+
+.nav-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+transform: none;
+top: 7px;
+
+
+  padding: 8px 14px;
+  border-radius: 15px;
+ background-color:aqua;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 8px rgba(255, 100, 100, 0.3);
+  transition: all 0.15s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-50%) translateY(-1px);
+  box-shadow: 0 5px 12px rgba(255, 100, 100, 0.5);
+}
+
+.nav-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+
+/* =========================
+   APP ROOT
+========================= */
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.audio-btn-large {
+  font-size: 20px;        /* 👈 icono más grande */
+  padding: 8px 14px;     /* 👈 hace el botón grande de verdad */
+  border-radius: 16px;    /* coherente con tu UI */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+color: white;
+font-weight: bold;
+box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* sutil, no rompe tu diseño */
+  cursor: pointer;
+  border: none;
+
+  transition: transform 0.15s ease;
+  margin-top: 25px;
+}
+
+.audio-btn-large:hover {
+  transform: scale(1.1);
+}
+
+.audio-btn-large:active {
+  transform: scale(0.95);
+}
+
+/* OPCIONES DEL QUIZ */
+.option-btn {
+  width: 100%;
+  max-width: 500px;
+
+  font-size: 18px;      /* 👈 más grande */
+  padding: 16px 20px;   /* 👈 botón más alto */
+
+  border-radius: 16px;
+  border: none;
+
+  background: #f5f5f5;
+  color: #333;
+
+  cursor: pointer;
+
+  margin: 10px 0;
+
+  text-align: center;
+
+  transition: transform 0.1s ease, background 0.1s ease;
+}
+
+.option-btn:hover {
+  background: #e0e0e0;
+}
+
+.option-btn:active {
+  transform: scale(0.97);
+}
+
+.app-header {
+  display: flex;
+  flex-direction: row; /* 👈 clave */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.app-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.app-header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* =========================
+   BIG LOGO (pantalla modo)
+========================= */
+
+.big-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  margin-top: 40px;
+}
+
+.big-logo {
+  width: 80%;
+  max-width: 320px;
+  height: auto;
+
+  opacity: 0.9;
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* efecto juvenil sutil */
+.big-logo:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.app-signature {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+
+  font-size: 12px;
+  color: rgba(18, 100, 230, 0.889);
+
+  letter-spacing: 1px;
+  font-weight: 500;
+
+  pointer-events: none;
+}
+
+/* =========================
+   QUIZ STATS
+========================= */
+
+.quiz-stats {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-bar {
+  width: 100%;
+  max-width: 500px;
+  height: 10px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color:blue;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.global-stats {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.6;
+}
