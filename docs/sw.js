@@ -1,9 +1,10 @@
-const CACHE_NAME = 'geo-capital-v1';
+const CACHE_NAME = 'geo-capital-v2';
 
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/logo_juvenil.png'
+  './',
+  './index.html',
+  './logos/logo-192.png',
+  './logos/logo-512.png'
 ];
 
 // instalar
