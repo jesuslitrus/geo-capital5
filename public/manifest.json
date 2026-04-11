@@ -3,7 +3,7 @@
   "short_name": "GeoCapital",
   "id": "/",
   "description": "Aprende países y capitales de forma interactiva",
-"start_url": "/geo-capital5/",
+  "start_url": ".",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#ffffff",
