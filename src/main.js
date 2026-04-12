@@ -146,6 +146,9 @@ function addFooterSignature() {
   footer.className = 'app-signature';
   footer.textContent = '@JesusLitruS';
   footer.style.fontSize = '18px';
+footer.style.fontWeight = '600';
+footer.style.opacity = '0.8';
+footer.style.letterSpacing = '1px';
 
   // 👇 hacer clickable (ANTES del append)
   footer.style.cursor = 'pointer';
