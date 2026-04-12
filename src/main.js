@@ -29,6 +29,10 @@ function renderLogin() {
   app.innerHTML = "";
 
   const container = document.createElement("div");
+  const logo = document.createElement("img");
+logo.src = "logos/logo-512.png";
+logo.style.width = "150px";
+logo.style.marginBottom = "20px";
   container.style.textAlign = "center";
   container.style.padding = "40px";
 
@@ -58,7 +62,8 @@ function renderLogin() {
       msg.textContent = result.error;
     }
   };
-
+container.appendChild(logo);
+container.appendChild(title);
   container.appendChild(title);
   container.appendChild(input);
   container.appendChild(button);
