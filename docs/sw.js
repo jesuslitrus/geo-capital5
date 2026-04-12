@@ -4,8 +4,8 @@ const urlsToCache = [
   './',
   './index.html',
   './manifest.json',
-  './logos/logo-192-v2.png',
-  './logos/logo-512-v2.png'
+  './logos/logo-192.png',
+  './logos/logo-512.png'
 ];
 
 // instalar
