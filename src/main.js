@@ -144,7 +144,8 @@ app.appendChild(bigLogoContainer);
 function addFooterSignature() {
   const footer = document.createElement('div');
   footer.className = 'app-signature';
-  footer.textContent = '@JesusLitrus';
+  footer.textContent = '@JesusLitruS';
+  footer.style.fontSize = '18px';
 
   // 👇 hacer clickable (ANTES del append)
   footer.style.cursor = 'pointer';
