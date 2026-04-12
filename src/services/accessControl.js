@@ -13,21 +13,21 @@ export async function validateAndUseCode(appId, inputCode) {
       const snap = await transaction.get(ref);
 
       if (!snap.exists()) {
-        return { ok: false, reason: "codigo-invalido" };
+        return { ok: false, reason: "Código incorrecto" };
       }
 
       const data = snap.data();
 
       if (data.appId !== appId) {
-        return { ok: false, reason: "codigo-invalido" };
+        return { ok: false, reason: "Código incorrecto" };
       }
 
       if (!data.active) {
-        return { ok: false, reason: "codigo-invalido" };
+        return { ok: false, reason: "Código incorrecto" };
       }
 
       if (data.used) {
-        return { ok: false, reason: "contraseña-usada" };
+        return { ok: false, reason: "Contraseña usada" };
       }
 
       transaction.update(ref, {

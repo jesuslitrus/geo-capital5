@@ -29,10 +29,7 @@ function renderLogin() {
   app.innerHTML = "";
 
   const container = document.createElement("div");
-  const logo = document.createElement("img");
-logo.src = "logos/logo-512.png";
-logo.style.width = "150px";
-logo.style.marginBottom = "20px";
+ 
   container.style.textAlign = "center";
   container.style.padding = "40px";
 
@@ -40,10 +37,27 @@ logo.style.marginBottom = "20px";
   title.textContent = "🔐 Introduce tu código";
 
   const input = document.createElement("input");
+  input.style.width = "80%";
+input.style.maxWidth = "300px";
+input.style.padding = "14px";
+input.style.fontSize = "16px";
+input.style.borderRadius = "10px";
+input.style.border = "1px solid #555";
+input.style.marginTop = "10px";
   input.placeholder = "Código...";
   input.id = "access-input";
 
   const button = document.createElement("button");
+  button.style.width = "80%";
+button.style.maxWidth = "300px";
+button.style.padding = "14px";
+button.style.fontSize = "16px";
+button.style.borderRadius = "10px";
+button.style.border = "none";
+button.style.backgroundColor = "#00C850";
+button.style.color = "#fff";
+button.style.marginTop = "15px";
+button.style.cursor = "pointer";
   button.textContent = "Entrar";
 
   const msg = document.createElement("p");
@@ -62,18 +76,42 @@ logo.style.marginBottom = "20px";
       msg.textContent = result.error;
     }
   };
-container.appendChild(logo);
-container.appendChild(title);
-  container.appendChild(title);
-  container.appendChild(input);
-  container.appendChild(button);
-  container.appendChild(msg);
+const logo = document.createElement("img");
+logo.src = "logos/logo-512.png";
+logo.style.width = "150px";
+logo.style.display = "block";
+logo.style.margin = "60px auto 20px auto";
+ container.appendChild(title);
+container.appendChild(input);
+container.appendChild(button);
+container.appendChild(msg);
+container.appendChild(logo);   // 👈 AQUÍ VA EL LOGO
+const intro = document.createElement("p");
+intro.textContent = "Aprende países y capitales de todo el mundo de forma rápida, visual y divertida. Practica por continentes y mejora tu memoria jugando.";
+
+intro.style.color = "#ffffff";       // 👈 texto blanco
+intro.style.fontSize = "18px";
+intro.style.fontWeight = "600"; 
+intro.style.marginTop = "50px";
+intro.style.opacity = "0.85";
+intro.style.lineHeight = "1.4";
+intro.style.maxWidth = "300px";
+intro.style.marginLeft = "auto";
+intro.style.marginRight = "auto";
+
+container.appendChild(intro);
+
+
 
   app.appendChild(container);
+  
+
+  
 }
 
 async function init() {
   console.log("INIT EJECUTANDO");
+  
 
   allCountries = await loadCountries()
 
