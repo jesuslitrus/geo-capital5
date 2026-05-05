@@ -187,6 +187,7 @@ app.appendChild(bigLogoContainer);
 function addFooterSignature() {
   const footer = document.createElement('div');
   footer.className = 'app-signature';
+<<<<<<< HEAD
   //footer.textContent = '@JesusLitruS';
   const brand = document.createElement('div');
 brand.style.display = 'flex';
@@ -206,6 +207,9 @@ brand.appendChild(icon);
 brand.appendChild(text);
 
 footer.appendChild(brand);
+=======
+  footer.textContent = '@JesusLitruS';
+>>>>>>> 07c849bbb640a8729c0663bc292aacfd9df8019c
   footer.style.fontSize = '18px';
 footer.style.fontWeight = '600';
 footer.style.opacity = '0.8';
