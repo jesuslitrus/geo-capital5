@@ -184,43 +184,31 @@ app.appendChild(bigLogoContainer);
   };
 }
 
+
+
 function addFooterSignature() {
   const footer = document.createElement('div');
   footer.className = 'app-signature';
 
   const brand = document.createElement('div');
-brand.style.display = 'flex';
-brand.style.alignItems = 'center';
-brand.style.justifyContent = 'center';
-brand.style.gap = '6px';
+  brand.style.display = 'flex';
+  brand.style.alignItems = 'center';
+  brand.style.justifyContent = 'center';
+  brand.style.gap = '6px';
 
-const icon = document.createElement('img');
-icon.src = 'logos/logo_corporativo_24x24.png';
-icon.style.width = '24px';
-icon.style.height = '24px';
+  const icon = document.createElement('img');
+  icon.src = 'logos/logo_corporativo_24x24.png';
+  icon.style.width = '24px';
+  icon.style.height = '24px';
 
-const text = document.createElement('span');
-text.innerHTML = '<span style="color:#38bdf8">JesusLitruS</span>';
+  const text = document.createElement('span');
+  text.innerHTML = '<span style="color:#38bdf8">JesusLitruS</span>';
 
-brand.appendChild(icon);
-brand.appendChild(text);
+  brand.appendChild(icon);
+  brand.appendChild(text);
 
-footer.appendChild(brand);
+  footer.appendChild(brand);
 
-  footer.style.fontSize = '18px';
-footer.style.fontWeight = '600';
-footer.style.opacity = '0.8';
-footer.style.letterSpacing = '1px';
-
-  // 👇 hacer clickable (ANTES del append)
-  footer.style.cursor = 'pointer';
-  // 👇 hacer área más grande (IMPORTANTE)
-footer.style.padding = '20px';
-footer.style.display = 'block';
-footer.style.textAlign = 'center';
-
-
-  // 👇 ESTA LÍNEA DEBE QUEDARSE AL FINAL
   document.body.appendChild(footer);
 }
 
