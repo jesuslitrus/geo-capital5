@@ -73,7 +73,7 @@ button.style.cursor = "pointer";
     if (result.ok) {
       location.reload();
     } else {
-      msg.textContent = result.error;
+      msg.textContent = result.error || result.reason;
     }
   };
 const logo = document.createElement("img");
@@ -81,18 +81,18 @@ logo.src = "logos/logo-512.png";
 logo.style.width = "150px";
 logo.style.display = "block";
 logo.style.margin = "60px auto 20px auto";
- container.appendChild(title);
+ container.appendChild(logo);
+container.appendChild(title);
 container.appendChild(input);
 container.appendChild(button);
 container.appendChild(msg);
-container.appendChild(logo);   // 👈 AQUÍ VA EL LOGO
 const intro = document.createElement("p");
 intro.textContent = "Aprende países y capitales de todo el mundo de forma rápida, visual y divertida. Practica por continentes y mejora tu memoria jugando.";
 
 intro.style.color = "#ffffff";       // 👈 texto blanco
 intro.style.fontSize = "18px";
 intro.style.fontWeight = "600"; 
-intro.style.marginTop = "50px";
+intro.style.marginTop = "20px";
 intro.style.opacity = "0.85";
 intro.style.lineHeight = "1.4";
 intro.style.maxWidth = "300px";
@@ -187,8 +187,7 @@ app.appendChild(bigLogoContainer);
 function addFooterSignature() {
   const footer = document.createElement('div');
   footer.className = 'app-signature';
-<<<<<<< HEAD
-  //footer.textContent = '@JesusLitruS';
+
   const brand = document.createElement('div');
 brand.style.display = 'flex';
 brand.style.alignItems = 'center';
@@ -207,9 +206,7 @@ brand.appendChild(icon);
 brand.appendChild(text);
 
 footer.appendChild(brand);
-=======
-  footer.textContent = '@JesusLitruS';
->>>>>>> 07c849bbb640a8729c0663bc292aacfd9df8019c
+
   footer.style.fontSize = '18px';
 footer.style.fontWeight = '600';
 footer.style.opacity = '0.8';
